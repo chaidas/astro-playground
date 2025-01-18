@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 const pageTitle = "About Page";
 const banksBooks = [
     {
@@ -64,11 +65,7 @@ const banksBooks = [
         </style>
     </head>
     <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">{pageTitle}</a>
-            <a href="/blog">Blog</a>
-        </nav>
+        <Navigation />
         <h1>{pageTitle}</h1>
         <p>Testing iterating through an array in frontmatter:</p>
         <ul>

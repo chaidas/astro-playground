@@ -1,5 +1,6 @@
 ---
-
+import Navigation from "../components/Navigation.astro";
+import Social from "../components/Social.astro";
 ---
 
 <html lang="en">
@@ -11,11 +12,10 @@
         <title>My Astro site</title>
     </head>
     <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/blog">Blog</a>
-        </nav>
+        <Navigation />
         <h1>My Astro site</h1>
+        <Social platform="twitter" username="astrodotbuild" />
+        <Social platform="github" username="withastro" />
+        <Social platform="youtube" username="astrodotbuild" />
     </body>
 </html>
