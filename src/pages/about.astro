@@ -1,6 +1,5 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Page";
 const banksBooks = [
     {
@@ -50,36 +49,23 @@ const banksBooks = [
 ];
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
-        <style>
-            h1 {
-                color: purple;
-                font-size: 4em;
-            }
-        </style>
-    </head>
-    <body>
-        <Header />
-        <h1>{pageTitle}</h1>
-        <p>Testing iterating through an array in frontmatter:</p>
-        <ul>
-            {
-                banksBooks.map((book) => (
-                    <li>
-                        {book.publication_year}: {book.title}
-                    </li>
-                ))
-            }
-        </ul>
-        {banksBooks.length > 2 && <p>Yup, Iain M. Banks wrote more than 2 books</p>}
-        <script>
-            import "../scripts/menu.js";
-        </script>
-    </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <style>
+        h1 {
+            color: purple;
+            font-size: 4em;
+        }
+    </style>
+    <h1>An H1 created at the page component...</h1>
+    <p>Testing iterating through an array in frontmatter:</p>
+    <ul>
+        {
+            banksBooks.map((book) => (
+                <li>
+                    {book.publication_year}: {book.title}
+                </li>
+            ))
+        }
+    </ul>
+    {banksBooks.length > 2 && <p>Yup, Iain M. Banks wrote more than 2 books</p>}
+</BaseLayout>

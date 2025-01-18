@@ -1,34 +1,23 @@
 ---
-import "../styles/global.css";
-import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Blog</title>
-    </head>
-    <body>
-        <Header />
-        <h1>Astro learning blog</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores eos eveniet fugiat, libero
-            maxime quia tempore tenetur? A adipisci alias explicabo hic maxime mollitia necessitatibus sapiente
-            veritatis vero. Animi!
-        </p>
-        <ul>
-            <li><a href="/posts/post-1">Why Star Trek is inherently better than Star Wars</a></li>
-            <li>
-                <a href="/posts/sword-of-truth-book-series-is-an-objectivist-obsession"
-                    >The Sword of Truth book series is an objectivist obsession</a
-                >
-            </li>
-        </ul>
-        <script>
-            import "../scripts/menu.js";
-        </script>
-    </body>
-</html>
+<BaseLayout>
+    <p>We've intentionally omitted the <code>pageTitle</code> prop when calling <code>BaseLayout</code></p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores eos eveniet fugiat, libero maxime
+        quia tempore tenetur? A adipisci alias explicabo hic maxime mollitia necessitatibus sapiente veritatis vero.
+        Animi!
+    </p>
+    <ul>
+        <li><a href="/posts/post-1">Why Star Trek is inherently better than Star Wars</a></li>
+        <li>
+            <a href="/posts/sword-of-truth-book-series-is-an-objectivist-obsession"
+                >The Sword of Truth book series is an objectivist obsession</a
+            >
+        </li>
+    </ul>
+    <script>
+        import "../scripts/menu.js";
+    </script>
+</BaseLayout>
