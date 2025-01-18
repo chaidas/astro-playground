@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const pageTitle = "About Page";
 const banksBooks = [
     {
@@ -55,6 +56,12 @@ const banksBooks = [
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4em;
+            }
+        </style>
     </head>
     <body>
         <nav>
