@@ -1,5 +1,51 @@
 ---
 const pageTitle = "About Page";
+const banksBooks = [
+    {
+        title: "Consider Phlebas",
+        publication_year: 1987,
+    },
+    {
+        title: "The Player of Games",
+        publication_year: 1988,
+    },
+    {
+        title: "Use of Weapons",
+        publication_year: 1990,
+    },
+    {
+        title: "The State of the Art",
+        publication_year: 1991,
+    },
+    {
+        title: "Excession",
+        publication_year: 1996,
+    },
+    {
+        title: "Inversions",
+        publication_year: 1998,
+    },
+    {
+        title: "Look to Windward",
+        publication_year: 2000,
+    },
+    {
+        title: "Matter",
+        publication_year: 2008,
+    },
+    {
+        title: "Surface Detail",
+        publication_year: 2010,
+    },
+    {
+        title: "The Hydrogen Sonata",
+        publication_year: 2012,
+    },
+    {
+        title: "The Culture: The Drawings",
+        publication_year: 2023,
+    },
+];
 ---
 
 <html lang="en">
@@ -17,14 +63,16 @@ const pageTitle = "About Page";
             <a href="/blog">Blog</a>
         </nav>
         <h1>{pageTitle}</h1>
-        <h2>... and my new Astro site!</h2>
-        <p>
-            I am working through Astro's introductory tutorial. This is the second page on my website, and it's the
-            first one I built myself!
-        </p>
-        <p>
-            This site will update as I complete more of the tutorial, so keep checking back and see how my journey is
-            going!
-        </p>
+        <p>Testing iterating through an array in frontmatter:</p>
+        <ul>
+            {
+                banksBooks.map((book) => (
+                    <li>
+                        {book.publication_year}: {book.title}
+                    </li>
+                ))
+            }
+        </ul>
+        {banksBooks.length > 2 && <p>Yup, Iain M. Banks wrote more than 2 books</p>}
     </body>
 </html>
