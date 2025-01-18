@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 const pageTitle = "About Page";
 const banksBooks = [
     {
@@ -65,7 +65,7 @@ const banksBooks = [
         </style>
     </head>
     <body>
-        <Navigation />
+        <Header />
         <h1>{pageTitle}</h1>
         <p>Testing iterating through an array in frontmatter:</p>
         <ul>
@@ -78,5 +78,8 @@ const banksBooks = [
             }
         </ul>
         {banksBooks.length > 2 && <p>Yup, Iain M. Banks wrote more than 2 books</p>}
+        <script>
+            import "../scripts/menu.js";
+        </script>
     </body>
 </html>
