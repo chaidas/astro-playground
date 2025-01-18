@@ -1,13 +1,11 @@
 ---
-title: "Why is Star Trek better than Star Wards?"
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Why is Star Trek better than Star Wars?"
 pubDate: 2025-01-18
 description: "A surprisingly accurate opinion treatise by Perplexity.ai"
 author: "Perplexity AI (pro mode)"
 tags: ["blog", "opinion", "star wars", "star trek"]
 ---
-
-# Why Star Trek is Inherently Better Than Star Wars
-
 Star Trek stands as the superior science fiction franchise, surpassing Star Wars
 in numerous aspects that make it a more profound and impactful cultural
 phenomenon.

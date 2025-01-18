@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "The Sword of Truth book series is an objectivist obsession"
 pubDate: 2025-01-18
 description: "I'm thoroughly impressed by what Perplexity.ai is doing here"
